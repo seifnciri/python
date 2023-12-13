@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Dojo Survey</h1>
+    <form action="/process" method="post">
+        <label for="name">Your Name:</label>
+        <input type="text" name="Name">
+        <br>
+        <label for="Location">Dojo Location:</label>
+        <select name="Location" id="Location">
+            <option>San Jose</option>
+        </select>
+        <br>
+        <label for="Language">Favorite Language:</label>
+        <select name="Language" id="Language">
+            <option>Python</option>
+        </select>
+        <br>
+        <label>Comment(optional):</label>
+        <br>
+        <textarea name="comment" cols="10" rows="2"></textarea>
+        <input type='submit' value='Button'>
+    </form>
+    
+</body>
+</html>

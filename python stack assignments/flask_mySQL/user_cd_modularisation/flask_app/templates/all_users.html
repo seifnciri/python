@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h1>ALL USERS</h1>
+    <br>
+    <table>
+        <thead>
+        <tr>
+        <th>ID</th>
+        <th>Full Name</th>
+        <th>Email</th>
+        <th>Create At</th>
+        <th>action</th>
+        </tr>
+        </thead>
+        <tbody>
+        
+        {%for y in u%}
+        <tr>
+         <td>{{y.id}}</td>
+         <td>{{y.first_name}} {{y.last_name}}</td>
+         <td>{{y.email}}</td>
+         <td>{{y.created_at}}</td>
+        <td><a href="users/{{y.id}}">Show</a> | <a href="#">Edit</a> | <a href="#">Delete</a></td>
+        </tr>
+         {%endfor%}
+        
+    </tbody>
+    </table>
+    <a href="/users/new">Add a new User</a>
+</body>
+</html>
